@@ -1,4 +1,4 @@
-let ingredients = ["Pâtes", " Oeuf", " Sel", " Poivre", " Oignon", " Lardons", " Parmesan"]
+let ingredients = [" Pâtes", " Oeuf", " Sel", " Poivre", " Oignon", " Lardons", " Parmesan"]
 let tab = ingredients.length //calcule le nombre de cases du tableau
 
 let nbIngr = "Vous avez besoin de " + tab + " ingrédients."
@@ -14,33 +14,24 @@ list() //appelle la fonction
 
 
 
-
-
-
-
-
-
-
-/*
 //afficher les ingrédients en liste ordonnée
-function Olist() {
-    for (let i = 0; i < tab; i++)
-     document.getElementsByClassName("alist").innerHTML = (ingredients) + "<br>"
-    }
-Olist()
+let ingrlist = new Array() //variable stocke un tableau
+function ol() {
+    ingr = ["Pâtes", " Oeuf", " Sel", " Poivre", " Oignon", " Lardons", " Parmesan"]
+    ingr[1] = "Pates"
+    ingr[2] = "Oeufs"
+    ingr[3] = "Sel"
+    ingr[4] = "Poivre"
+    ingr[5] = "Oignon"
+    ingr[6] = "Lardons"
+    ingr[7] = "Parmesan"
 
-*/
-
-//afficher la liste des ingrédients alphabet
-function alist() {
-    ingredients.sort(function (a, b) {
-        
-            a.length - b.length;
-
-            document.getElementById("alist").innerHTML = (ingredients) + "<br>"
-            return //doit être mis à la fin pour toutes les instructions soient lues
-        }
-
-    )
+    let olist = ingrlist.sort()
+    document.write(olist).innerHTML
 }
-alist()
+
+
+
+//afficher la liste des ingrédients alphabet. Ne fonctionne pas quand la fonction du dessus est activée : pourquoi ? Il n'y a pas d'accolade qui indique le début et la fin de la fonction.
+let alist = ingredients.sort()
+document.write(alist).innerHTML
