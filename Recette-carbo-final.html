@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Exercice </title>
+</head>
+<body>
+<h1> Recette carbonara </h1>
+<div id="ingr"></div>
+<div id="list"></div>
+<script>
+
+let ingredients = [" Pâtes ", " Oeuf ", " Sel ", " Poivre ", " Lardon ", " Oignon ", " Parmesan "];
+let TotalIngredients = ingredients.length;
+
+var texte = " Il y a " + TotalIngredients + " ingrédients dans cette recette ";
+
+
+document.getElementById("ingr").innerHTML = (texte);
+
+document.getElementById("list").innerHTML = (ingredients);
+
+
+ingredients.sort();
+
+
+for (let i=0; i<ingredients.length; i++) {
+  console.log(ingredients[i])
+  let index=i+1
+            let texte2=`${index} ${ingredients[i]}<br>`;
+            document.body.innerHTML += texte2;
+}
+
+</script>
+
+    </body>
+    </html>
+
+    
